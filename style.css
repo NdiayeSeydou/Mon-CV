@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* mettre le commentaire sur l'entierete de ma page avec le selecteur universelle*/
+*{
+    /*supprimer toutes les marges exterieures */
+    margin: 0;
+    /*supprimer toutes les marges interieures */
+    padding: 0;
+    /* prendre un controle total sur la hauteur,largeur,margin et le pading*/
+    box-sizing: border-box;
+    /* la police d'ecriture par defaut qui sera utiliser dans l'ensemble de la page web*/
+    font-family:'roboto', 'sans-serif';
+}
+/* le corps de mon site*/
+body{
+    /* couleur de fond de ma page web */
+    background-color:rgba(12, 233, 222, 0.678) ;
+    /*permet que les elements soit flexible*/
+    display: flex;
+    /* permet que les elements soit horizontalement*/
+    justify-content: center;
+    /*permet que les elements qui seront inserer verticalement*/
+    align-items: center;
+    /*definir la hauteur minimale a 100% de la hauteur de la fenetre*/
+    min-height: 100vh;
+}
+/*le menu qui contient les 2 parties essentielles de mon site*/
+.container{
+    /*se positionne normalement dans le flux et peut etre modifier en utilisant les proprietes top, right, bottom et left*/
+    position: relative;
+    /*la largeur de l'element sera a 100% dans la div container*/
+    width: 100%;
+    /*elle limite la taille maximale a 100px*/
+    max-width:1000px;
+    /*la hauteur minimale sera a 1000px et ne sera jamais inferieur a 1000px*/
+    min-height: 1000px;
+    /*la couleur de fond de l'element*/
+    background-color:rgb(214, 218, 13) ;
+    /*cela permet de creer des grilles (lignes, colone)*/
+    display: grid;
+    /*la taille des colones la premiere sera moyenne et l'autre 2 fois plus grande*/
+    grid-template-columns: 1fr 2fr;
+    /*cree une ombre le 0 veut dire rien horizontalement 35px verticalement 55px rayon flou rgb la couleur de l'ombre*/
+    box-shadow: 0 35px 55px rgb(43, 13, 13);
+}
+/* la partie gauche de mon cv*/
+.container .left_side{
+    /* la couleur de fond de l'element*/
+    background-color:rgb(35, 71, 124);
+    /*la marge interieur a 40px*/
+    padding: 20px;
+    margin: 0;
+
+}
+.mon_profile{
+    /*se positionne normalement dans le flux et peut etre modifier en utilisant les proprietes top, right, bottom et left*/
+    position: relative;
+    /*permet que les elements soit flexible*/
+    display: flex;
+    /*ici les elements seront disposer de haut en bas */
+    flex-direction: column;
+    /*permet de centrer les elements enfants*/
+    align-items: center;
+    /*ajoute un espace de 20px en bas des elements*/
+    padding-bottom: 20px;
+    /*ajoute une bordure de 20px de type solide avec une couleur blanche*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.mon_profile .img_box{
+    /*se positionne normalement dans le flux et peut etre modifier en utilisant les proprietes top, right, bottom et left*/
+    position: relative;
+    /*une largeur de 200px*/
+    width: 200px;
+    /*une hauteur de 200px*/
+    height: 200px;
+    /*cree une forme circulaire de 50%*/
+    border-radius: 50%;
+    /*masque tout le contenue qui depassent les limites et garantit que l'image reste a l'interieur du border-radius*/
+    overflow: hidden ;
+}
+.mon_profile .img_box img{
+    /*l'ement sera positionner en haut*/
+    top: 0;
+    /*l'ement sera positionner a gauche*/
+    left: 0;
+    /*une largeur de 100%*/
+    width: 100%;
+    /*une hauteur de 100%*/
+    height: 100%;
+    /*fait que l'objet couvre entierement le border-radius*/
+    object-fit: cover;
+}
+.mon_profile h2{
+    /*color de la police d'ecriture*/
+    color:aliceblue;
+    /*la taille de la police de 1.5 a la police parent*/
+    font-size: 1.5em;
+    /*bordure de haut et de bas a 20px*/
+    margin-top: 20px;
+    /*le text sera au milieu*/
+    text-align: center;
+    /*l'ecriture sera en majiscule*/
+    text-transform: uppercase;
+    /*definir la taille de la police a 600*/
+    font-weight: 600;
+    /*espacement entre les lignes */
+    line-height: 1.4 em;
+}
+.mon_profile h2 span{
+    /*la taille de la police de 0.7 a la police parent*/
+    font-size: 0.7em;
+}
+.info{
+    padding-top: 40px;
+
+}
+.info  li a{
+    text-decoration: none;
+    color: aqua;
+}
+.title{
+    color:blue;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 28PX;
+}
+.info ul {
+    position: relative;
+}
+.info ul li {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    margin: 18px 0;
+}
+.info ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: orange;
+    transition: background-color 0.3 ease;
+}
+.info ul li .icon:hover{
+    color: aqua;
+}
+.info ul li span{
+    color: azure;
+    font-weight: 400;
+}
+.info_education li{
+    margin-bottom: 15px;
+    list-style: none;
+}
+.info_education h5{
+    color: orange;
+    font-weight: 500;
+}
+.info_education h4:nth-child(2){
+    color: beige;
+    font-weight: 500;
+}
+.info_education h4{
+    color: beige;
+    font-weight: 300;
+}
+.info_lang li{
+    list-style: none;
+    color: aliceblue;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    align-items: center;
+}
+
+.info_lang .pourcentage{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    display: block;
+    background-color: black;
+}
+.info_lang .pourcentage div{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+    background: aqua;
+}
+
+/* la partie droite de mon cv*/
+.container .right_side{
+    /*se positionne normalement dans le flux et peut etre modifier en utilisant les proprietes top, right, bottom et left*/
+    position: relative;
+    /*la couleur de fond de l'element*/
+    background-color: aliceblue;
+    /*la marge interieur a 40px*/
+    padding: 40px; 
+}
+.about{
+    margin-bottom: 50px;
+
+}
+.about :last-child{
+    margin-bottom: 0;
+}
+.title2{
+    color:blue;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p{
+    color: #333;;
+}
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 40px 0;
+
+}
+.about .box .year{
+    min-width: 150px;
+}
+.about .box .year h5{
+    text-transform: uppercase;
+    color: blue;
+    font-weight: 600;
+}
+.skills .box1{
+    position: relative;
+    letter-spacing: 1px;
+    margin: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 300px fr;
+}
+.skills .box1 h4{
+    text-transform: uppercase;
+    color: blue;
+    font-weight: 600;
+}
+.skills .pourcentage{
+    position: relative;
+    height: 08px;
+    width: 60%;
+    background-color: #333;
+}
+.skills .pourcentage div{
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    background: blue;
+}
+.centre_interet ul{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.centre_interet ul li{
+    list-style: none;
+    font-weight: 500;
+    margin: 10px 0;
+    color: #333;
+}
+.centre_interet ul li i{
+    color:orange;
+    transition: background-color 0.3 ease;
+    cursor: pointer;
+}
+.centre_interet ul li i:hover{
+    color:aqua;
+}
+@media(max-width:1000px){
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .centre_interet ul{
+        align-items: center;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media(max-width:600px){
+    .about .box{
+        flex-direction: column;
+    }
+    .about .box .box1  .year{
+        margin-bottom: 5px;
+    }
+    .centre_interet ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skills .box1{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
